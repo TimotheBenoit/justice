@@ -1,0 +1,85 @@
+@import 'blocs/header';
+@import 'blocs/footer';
+@import 'mixins';
+@import 'medias';
+@import url('https://fonts.googleapis.com/css?family=Contrail+One|Philosopher');
+
+*
+{
+  margin:0;
+  background: rgb(15,15,52);
+}
+
+$special-white:rgb(200,200,200);
+
+@font-face {
+ font-family: "Roboto";
+ src: url("../fonts/Roboto-Regular.ttf") format("truetype");
+}
+
+#menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .menu__trait {
+    width:20%;
+    height:2px;
+    background-color: white;
+    display: none;
+
+    @include large {
+      display: flex;
+    }
+  }
+
+  .menu__title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h1 {
+    color: $special-white;
+    font-family: 'Contrail One', cursive;
+    font-size: 8rem;
+  }
+
+  h2 {
+    color: $special-white;
+    font-size: 3rem;
+  }
+
+}
+
+#perso {
+
+  position: relative;
+
+  h1 {
+    color: $special-white;
+    font-family: "Roboto", Arial;
+    font-size: 8rem;
+    font-family: 'Contrail One', cursive;
+  }
+
+  .perso__img {
+    background: url("../img/batman.png") no-repeat;
+    background-size: cover;
+    width: 60%;
+    height:40vh;
+  }
+
+  p {
+    color:rgb(180,180,180);
+    width:50%;
+    font-size: 2rem;
+    position: absolute;
+    top: 30%;
+    right: 60px;
+    text-align: justify;
+    background-color: transparent;
+    font-family: 'Philosopher', sans-serif;
+  }
+}
