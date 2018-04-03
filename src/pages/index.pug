@@ -4,14 +4,43 @@ header(id="menu")
   div(class="menu__trait")
   <div class="menu__title">
     h1 Justice League
-    h2 Présentation des Justiciers
+    div.menu__nav
+      a.batman(href="#batman") Batman
+      a.flash(href="#flash") Flash
+      a.aquaman(href="#aquaman") Aquaman
+      a.greenwoman(href="#greenwoman") Green Woman
+      a.wonderlantern(href="#wonderlantern") Wonder Lantern
   </div>
   div(class="menu__trait")
 
-<section id="perso">
+<section id="batman">
+  div(class="batman__img")
   h1 Batman
-  div(class="perso__img")
-  p Créé par le dessinateur Bob Kane et le scénariste Bill Finger, il apparaît pour la première fois dans le comic book Detective Comics no 27 avec le nom de The Bat-Man. Bien que ce soit le succès de Superman qui ait amené sa création, il se détache de ce modèle puisqu'il n'a aucun pouvoir surhumain. Batman n'est qu'un simple humain qui a décidé de lutter contre le crime après avoir vu ses parents se faire abattre par un voleur dans une ruelle de Gotham City, la ville où se déroulent la plupart de ses aventures.
+  p <span>B</span>ien que ce soit le succès de Superman qui ait amené sa création, il se détache de ce modèle puisqu'il n'a aucun pouvoir surhumain. Batman n'est qu'un simple humain qui a décidé de lutter contre le crime après avoir vu ses parents se faire abattre par un voleur dans une ruelle de Gotham City, la ville où se déroulent la plupart de ses aventures.
+</section>
+
+<section id="flash">
+  div(class="flash__img")
+  h1 Flash
+  p <span>F</span>lash est doué d’une vitesse de réaction et de déplacement proche de celle de la lumière, d’où son surnom d’homme le plus rapide du monde. Il peut ainsi défier la gravité en courant à la verticale ou sur l’eau sans s’y enfoncer. Poussé à son paroxysme, Flash peut faire vibrer ses molécules et ainsi devenir intangible pour traverser la matière solide ou la faire exploser.
+</section>
+
+<section id="aquaman">
+  div(class="aquaman__img")
+  h1 Aquaman
+  p <span>A</span>quaman est le fils d'un puissant magicien du nom d'Atlan, qui charma Atlanna, reine d'Atlantis, avec sa magie. Les principaux pouvoirs des Aquaman sont la capacité de communiquer par télépathie avec toutes les formes de vie marine, celle de rester sous l'eau en apnée, une vitesse de nage très élevée et une force physique surhumaine.
+</section>
+
+<section id="greenwoman">
+  div(class="wonderwoman__img")
+  h1 Wonder Woman
+  p <span>W</span>onder Woman est la princesse Diana d'une tribu d'Amazones dont les origines sont liées à la mythologie grecque. Ambassadrice amazone dans notre monde, elle possède différents pouvoirs surnaturels ainsi que des cadeaux des dieux grecs, comme un lasso magique et des bracelets à l'épreuve des balles. Elle fait aussi partie de la Ligue des justiciers d'Amérique.
+</section>
+
+<section id="wonderlantern">
+  div(class="greenlantern__img")
+  h1 Green Lantern
+  p <span>D</span>e très anciens extraterrestres surpuissants ont créé et semé dans tous les univers des anneaux utilisant la « Force de Volonté », régénérés par la Lanterne Verte. Ces bagues sont destinées à des êtres sachant surpasser la peur. " En plein jour ou dans la nuit noire, nul mal n'échappe à mon regard. Que tous ceux qui devant le mal se prosternent, craignent la lumière des Green Lantern ! "
 </section>
 
 include ../partials/footer.pug

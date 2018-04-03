@@ -1,5 +1,5 @@
 $medium: 600px;
-$large: 1024px;
+$large: 960px;
 
 @mixin medium {
   @media (min-width: #{$medium}) {

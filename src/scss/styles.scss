@@ -11,19 +11,49 @@
 }
 
 $special-white:rgb(200,200,200);
+$size-paragraphe:2rem;
 
-@font-face {
- font-family: "Roboto";
- src: url("../fonts/Roboto-Regular.ttf") format("truetype");
+// PREPARATION DES BLOCS COMMUNS
+
+h1 {
+  color: $special-white;
+  font-size: 8rem;
+  font-family: 'Contrail One', cursive;
 }
+
+p {
+  color: $special-white;
+  width:50%;
+  font-size: $size-paragraphe;
+  text-align: justify;
+  background-color: transparent;
+  font-family: 'Philosopher', sans-serif;
+
+  span {
+    font-size: $size-paragraphe + 3;
+    font-family: 'Contrail One', cursive;
+    background-color: transparent;
+  }
+
+  @include medium {
+    font-size: 1.8rem;
+  }
+
+  @include large {
+    font-size: 1.3rem;
+  }
+}
+
+// DEBUT DU CODE
 
 #menu {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 3vh;
 
   .menu__trait {
-    width:20%;
+    width:10%;
     height:2px;
     background-color: white;
     display: none;
@@ -38,48 +68,248 @@ $special-white:rgb(200,200,200);
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
+    width:100%;
+    font-size: 12rem;
 
-  h1 {
-    color: $special-white;
-    font-family: 'Contrail One', cursive;
-    font-size: 8rem;
+    @include medium {
+      font-size: 8rem;
+    }
   }
 
   h2 {
     color: $special-white;
     font-size: 3rem;
+
+    @include medium {
+      font-size: 2rem;
+    }
   }
 
+  .menu__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+      font-size: 1.6rem;
+      text-decoration: none;
+      color: $special-white;
+      padding:0 3vh;
+    }
+
+  }
 }
 
-#perso {
+#batman {
 
   position: relative;
 
-  h1 {
-    color: $special-white;
-    font-family: "Roboto", Arial;
-    font-size: 8rem;
-    font-family: 'Contrail One', cursive;
+  @include large {
+    width: 50%;
+    margin: 0 auto;
+    border-bottom: 1px solid white;
+    padding: 6vh 0;
   }
 
-  .perso__img {
+  h1 {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 40px;
+
+    @include medium {
+      font-size: 5rem;
+    }
+    @include large {
+      font-size: 3rem;
+    }
+  }
+
+  .batman__img {
     background: url("../img/batman.png") no-repeat;
     background-size: cover;
     width: 60%;
     height:40vh;
+
+    @include medium {
+      height:60vh;
+    }
   }
 
   p {
-    color:rgb(180,180,180);
-    width:50%;
-    font-size: 2rem;
     position: absolute;
-    top: 30%;
+    top: 20%;
     right: 60px;
-    text-align: justify;
-    background-color: transparent;
-    font-family: 'Philosopher', sans-serif;
+  }
+}
+
+#flash {
+
+  position: relative;
+
+  @include large {
+    width: 50%;
+    margin: 0 auto;
+    border-bottom: 1px solid white;
+    padding: 6vh 0;
+  }
+
+  h1 {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 40px;
+
+    @include medium {
+      font-size: 5rem;
+    }
+    @include large {
+      font-size: 3rem;
+    }
+  }
+
+  .flash__img
+  {
+    background: url("../img/flash.png") no-repeat;
+    background-size: cover;
+    width: 60%;
+    height: 40vh;
+    margin-left: 40%;
+
+    @include medium {
+      height:60vh;
+    }
+  }
+
+  p {
+    position: absolute;
+    top: 20%;
+    left: 60px;
+  }
+}
+
+#aquaman {
+
+  position: relative;
+
+  @include large {
+    width: 50%;
+    margin: 0 auto;
+    border-bottom: 1px solid white;
+    padding: 6vh 0;
+  }
+
+  h1 {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 40px;
+
+    @include medium {
+      font-size: 5rem;
+    }
+    @include large {
+      font-size: 3rem;
+    }
+  }
+
+  .aquaman__img {
+    background: url("../img/aquaman.png") no-repeat;
+    background-size: cover;
+    width: 60%;
+    height: 40vh;
+
+    @include medium {
+      height:60vh;
+    }
+  }
+
+  p {
+    position: absolute;
+    top: 20%;
+    right: 60px;
+  }
+}
+
+#greenwoman {
+
+  position: relative;
+
+  @include large {
+    width: 50%;
+    margin: 0 auto;
+    border-bottom: 1px solid white;
+    padding: 6vh 0;
+  }
+
+  h1 {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 40px;
+
+    @include medium {
+      font-size: 5rem;
+    }
+    @include large {
+      font-size: 3rem;
+    }
+  }
+
+  .wonderwoman__img
+  {
+    background: url("../img/wonderwoman.png") no-repeat;
+    background-size: cover;
+    width: 60%;
+    height: 40vh;
+    margin-left: 40%;
+
+    @include medium {
+      height:60vh;
+    }
+  }
+
+  p {
+    position: absolute;
+    top: 20%;
+    left: 60px;
+  }
+}
+
+#wonderlantern {
+
+  position: relative;
+
+  @include large {
+    width: 50%;
+    margin: 0 auto;
+    padding: 6vh 0;
+  }
+
+  h1 {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 40px;
+
+    @include medium {
+      font-size: 5rem;
+    }
+  }
+
+  .greenlantern__img {
+    background: url("../img/greenlantern.png") no-repeat;
+    background-size: cover;
+    width: 60%;
+    height: 40vh;
+
+    @include medium {
+      height:60vh;
+    }
+  }
+
+  p {
+    position: absolute;
+    top: 20%;
+    right: 60px;
+
+    @include large {
+      width: 40%;
+    }
   }
 }
